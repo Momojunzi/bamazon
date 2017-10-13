@@ -125,7 +125,7 @@ function getPurchaseQuantity(id, name, quantity, price, connectionName){
         function(err, results){
           if(err){ console.log(err);}
         });
-        var totalCost = buyAmount*price;
+        var totalCost = (buyAmount*price).toFixed(2);
         setTimeout(function(){
           console.log('\n_______________________________________________\n'+
           '\n\nYou bought '+buyAmount+ ' '+name + 's.\n'+
